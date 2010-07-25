@@ -60,11 +60,17 @@
 
 
       #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
+	    background-color: white;
+	    position: relative;
         height: 64px;
       }
+	  .maitre-logo {
+		height: 64px;
+		margin-right: 20px;
+		position: absolute;
+		top: 0px;
+		left: -16px;
+	  }
       #header h1, #header h2 {margin: 0}
       #header h2 {
         color: #888;
@@ -72,7 +78,9 @@
         font-size: 16px;
       }
 
-
+	  #about {
+		display: none;
+	  }
       #about h3 {
         margin: 0;
         margin-bottom: 10px;
@@ -219,7 +227,7 @@
           </li>
 
           <li>
-            <h3>Join the community</h3>
+            <h3>Manage Gems</h3>
             <ul class="links">
               <li><a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
               <li><a href="http://weblog.rubyonrails.org/">Official weblog</a></li>
@@ -228,7 +236,7 @@
           </li>
 
           <li>
-            <h3>Browse the documentation</h3>
+            <h3>Manage Layouts</h3>
             <ul class="links">
               <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
               <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
@@ -236,13 +244,35 @@
               <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
             </ul>
           </li>
+
+          <li>
+            <h3>Manage Themes</h3>
+            <ul class="links">
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
+              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h3>Manage Servers</h3>
+            <ul class="links">
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
+              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
+            </ul>
+          </li>
+
         </ul>
       </div>
 
       <div id="content">
         <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+		  <img class="maitre-logo"  src="images/maitre.jpg" alt="" />
+          <h1>Good Evening!</h1>
+          <h2>I will be your Ma&icirc;tre D'!</h2>
         </div>
 
         <div id="about">
@@ -251,23 +281,24 @@
         </div>
 
         <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
+          <h1>What services I render</h1>
+          <h2>Here&rsquo;s a quick introduction to the services you will be able to expect me to handle for you:</h2>
 
           <ol>
             <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
+              <h2>Add functionality using published Gems</h2>
+              <p>There is an overwhelming number of gems. Most are prestine quality gems - some brilliant!</p>
             </li>
 
             <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
+              <h2>Redecorate entirely with Layouts</h2>
+              <p>Rails App&rsquo;s has a special folder below the root - <code>app/views/layouts</code> - which holds
+	 			 the layouts used by the App. I offer you a chance to extend this functionality</p>
             </li>
 
             <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
+              <h2>Add a fresh coat of paint</h2>
+              <p>You can rework the stylesheets used by the Rails App</p>
             </li>
           </ol>
         </div>

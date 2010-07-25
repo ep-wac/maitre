@@ -16,6 +16,29 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # To use debugger
 group :development do
 	gem 'ruby-debug'
+
+	gem "rspec-rails", ">= 2.0.0.beta.17"
+	gem 'rspec'
+
+	gem 'cucumber'
+	gem 'cucumber-rails'
+	gem 'aruba', ">= 0.2.0", :require => nil
+	gem 'jeweler'
+	gem 'capybara'
+	
+end
+
+group :test do
+
+	gem "rspec-rails", ">= 2.0.0.beta.17"
+	gem 'rspec'
+
+	gem 'cucumber'
+	gem 'cucumber-rails'
+	gem 'aruba', ">= 0.2.0", :require => nil
+	gem 'jeweler'
+	gem 'capybara'
+
 end
 
 # Bundle the extra gems:
