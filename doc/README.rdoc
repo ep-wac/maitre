@@ -2,3 +2,25 @@
 
 == What is this?
 
+I hope Maître will grow to be the housekeeping component in Rails Apps - 
+
+=== What does Maître do?
+
+Housekeeping Rails Apps is - not exclusively, but at least - managing a few issues, including:
+
+* gems
+* layouts
+* themes
+* environments (staging and production)
+
+== Installation
+
+1. Clone this repository to your webserver steel and make the necessary wiring to connect with your webserver 
+of choice - I'm a Passenger but I hear others like Nginx and there is always the ol' faithful indian ;)
+
+2. Wire Maître to connect to an _off-coast_ port like 8080 - but again, at your discretion.
+
+3. There ought not to be a step three :)
+
+== Using Maître D'
+
