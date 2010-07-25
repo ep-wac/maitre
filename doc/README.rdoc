@@ -13,14 +13,47 @@ Housekeeping Rails Apps is - not exclusively, but at least - managing a few issu
 * themes
 * environments (staging and production)
 
+=== Why going with Maître - and will it substitute Capistrano, Vlad et al?
+
+First of - Maître is not a substitute for deployment per se - but more like a control panel, once your app has been deployed.
+
+Second - Maître is not intended for webservers running a lot of virtual webservers but addressing the needs of one-app serving webservers
+typically located within an organisation using the app as some kind of intranet.
+
 == Installation
 
-1. Clone this repository to your webserver steel and make the necessary wiring to connect with your webserver 
-of choice - I'm a Passenger but I hear others like Nginx and there is always the ol' faithful indian ;)
+1. Clone this repository to your webserver steel and make the necessary wiring to connect with your webserver of choice - I'm a Passenger but I hear others like Nginx and there is always the ol' faithful indian ;)
 
-2. Wire Maître to connect to an _off-coast_ port like 8080 - but again, at your discretion.
+2. Wire Maître to connect to an <em>off-coast</em> port like 8080 - but again, at your discretion.
 
 3. There ought not to be a step three :)
 
 == Using Maître D'
 
+I will try to describe the use case I find most imminent:
+
+"An organisation has deployed an intranet using the Rails framework. IT Development builds the app with published gems and inhouse code, which all gets
+pushed to an inhouse git-server. From this server new versions of the app are staged, approved and eventually deployed for production."
+
+=== Gems
+
+Managing gems on a webserver is handled by Bundler - and without having tried so, I suspect Capistrano, Vlad and the rest will soon have Bundler tasks
+integrated into the deploy use cases. So why use Maître?
+
+Maître aims to be a packaging - or you could say repackaging - management app. Imagine a set of gems all prepared by some provider (inhouse IT development
+or a sub contractor) to comply with a small set of conventions (which I will list soon) and in effect offer functionality to the app, merely by
+installing and perhaps configuring!
+
+=== Layouts
+
+As is the case for gems, layouts could be of a general type, prepared by a sub contractor (for a number of customers) and each customer will only
+have to make minor alterations to having layouts align with customer requirements.
+
+=== Themes
+
+Well - I think you get the picture by now :) Themes are kind of Wordpress themes, for Rails Apps
+
+=== Servers
+
+Moving all of the above through staging, approval and finally deploying for production, will require some kind of hands on with staging and production
+servers. 
