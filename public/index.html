@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
+    <title>Ma&icirc;tre: Good Evening!</title>
     <style type="text/css" media="screen">
       body {
         margin: 0;
@@ -191,27 +191,44 @@
 
     </style>
     <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
+		function ajax(url) {
+		  if (window.XMLHttpRequest)
+		    { xhr = new XMLHttpRequest(); }
+		  else
+		    { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+		  xhr.open("GET",url,false);
+		  xhr.send("");
+		  return xhr.responseText;
+		}
+		
+		function showGems() {
+			content=document.getElementById('content');
+			if (content) {
+				content.innerHTML = ajax("gems");
+			}
+		}
+		
+		function about() {
+		  info = document.getElementById('about-content');
+		  if (window.XMLHttpRequest)
+		    { xhr = new XMLHttpRequest(); }
+		  else
+		    { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
+		  xhr.open("GET","rails/info/properties",false);
+		  xhr.send("");
+		  info.innerHTML = xhr.responseText;
+		  info.style.display = 'block'
+		}
 
-      function prepend() {
-        search = document.getElementById('search-text');
-        text = search.value;
-        search.value = 'site:rubyonrails.org ' + text;
-      }
+		function prepend() {
+		  search = document.getElementById('search-text');
+		  text = search.value;
+		  search.value = 'site:rubyonrails.org ' + text;
+		}
 
-      window.onload = function() {
-        document.getElementById('search-text').value = '';
-      }
+		window.onload = function() {
+		  document.getElementById('search-text').value = '';
+		}
     </script>
   </head>
   <body>
@@ -227,11 +244,21 @@
           </li>
 
           <li>
-            <h3>Manage Gems</h3>
+            <h3>Manage Webserver</h3>
             <ul class="links">
-              <li><a href="http://www.rubyonrails.org/">Ruby on Rails</a></li>
+              <li><a href="/gems">Manage installed Gems</a></li>
               <li><a href="http://weblog.rubyonrails.org/">Official weblog</a></li>
               <li><a href="http://wiki.rubyonrails.org/">Wiki</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <h3>Manage Servers</h3>
+            <ul class="links">
+              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
+              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
+              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
+              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
             </ul>
           </li>
 
@@ -247,16 +274,6 @@
 
           <li>
             <h3>Manage Themes</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-
-          <li>
-            <h3>Manage Servers</h3>
             <ul class="links">
               <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
               <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
@@ -288,6 +305,28 @@
             <li>
               <h2>Add functionality using published Gems</h2>
               <p>There is an overwhelming number of gems. Most are prestine quality gems - some brilliant!</p>
+            </li>
+
+            <li>
+              <h2>Supervise the webserver</h2>
+              <p>You downloaded me to this server - now I own it! Well perhaps that is somewhat of an exaggeration
+				 but I certainly do try to make living with a webserver a lot easier on the administrator!</p>
+            </li>
+
+            <li>
+              <h2>Manage sites</h2>
+              <p>I have a select few jobs lined up for you pertaining to the management of sites - 
+				<ul>
+					<li>define whether the site is a staged or a production site,</li>
+					<li>wiring it to the webserver,</li>
+					<li>setting up the database connections, </li>
+				</ul>
+			  </p>
+            </li>
+
+            <li>
+              <h2>Getting the Git of it</h2>
+              <p></p>
             </li>
 
             <li>

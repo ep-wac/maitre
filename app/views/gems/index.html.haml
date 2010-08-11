@@ -1,0 +1,24 @@
+%h1 Installed Gems
+= form_for :gem do |f|
+	.field
+		= f.label :title, "New Gem"
+		= f.text_field :title
+	.actions
+		= f.submit "Install"
+		
+%table
+	%tr
+		%th Title
+		%th Versions
+		%th Remove
+
+	- @gems.split("\n").each do |gem|
+		- gem_attributes = gem.split(" ")
+		- gem_name = gem_attributes.shift
+
+		%tr
+			%td= link_to gem_name, "/gems/#{gem_name}", :remote => true
+			%td= gem_attributes.collect{|v| v.gsub(/[\(\)\,]/,"")}.join(", ")
+			%td= show_delete_gem_version gem_name
+
+%br

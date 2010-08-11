@@ -26,13 +26,13 @@ typically located within an organisation using the app as some kind of intranet.
 
 2. Wire Maître to connect to an <em>off-coast</em> port like 8080 - but again, at your discretion.
 
-3. There ought not to be a step three :)
+3. There ought not to be a step three - well perhaps except for reloading your webserver :)
 
 == Using Maître D'
 
 I will try to describe the use case I find most imminent:
 
-"An organisation has deployed an intranet using the Rails framework. IT Development builds the app with published gems and inhouse code, which all gets
+"An organisation deploys an intranet using the Rails framework. IT Development builds the app with published gems and inhouse code, which all gets
 pushed to an inhouse git-server. From this server new versions of the app are staged, approved and eventually deployed for production."
 
 === Gems
@@ -42,7 +42,7 @@ integrated into the deploy use cases. So why use Maître?
 
 Maître aims to be a packaging - or you could say repackaging - management app. Imagine a set of gems all prepared by some provider (inhouse IT development
 or a sub contractor) to comply with a small set of conventions (which I will list soon) and in effect offer functionality to the app, merely by
-installing and perhaps configuring!
+installing (and perhaps some minor configuring)!
 
 === Layouts
 

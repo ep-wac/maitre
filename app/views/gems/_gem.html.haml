@@ -1,0 +1,30 @@
+%h1 Installed Gems
+%h2= @gem["name"]
+%p= @gem["info"]
+%p
+%table
+	%tr
+		%td Project URL:
+		%td= link_to @gem["project_uri"], @gem["project_uri"]
+	%tr
+		%td Homepage URL:
+		%td= link_to @gem["homepage_uri"], @gem["homepage_uri"]
+
+	%tr
+		%td Wiki URL:
+		%td= link_to @gem["wiki_uri"], @gem["wiki_uri"]
+
+	%tr
+		%td Documentation URL:
+		%td= link_to @gem["documentation_uri"], @gem["documentation_uri"]
+
+	%tr
+		%td Source URL:
+		%td= link_to @gem["source_code_uri"], @gem["source_code_uri"]
+
+	%tr
+		%td Bug Tracker URL:
+		%td= link_to @gem["bug_tracker_uri"], @gem["bug_tracker_uri"]
+
+%p= link_to "Update Gem", "/gems/#{@gem["name"]}/edit", :remote => true
+%div#update_result

@@ -41,6 +41,10 @@ group :test do
 
 end
 
+# templating with HAML/SASS
+gem 'haml'
+
+gem 'httparty'
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri', '1.4.1'

@@ -48,6 +48,12 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"(?: within "([^"]*)")?$/ do |value,
   end
 end
 
+When /^(?:|I )fill in "([^"]*)" with the current time$/ do |field, value, selector|
+  with_scope(selector) do
+    fill_in(field, :with => Time.now)
+  end
+end
+
 # Use this to fill in an entire form with data from a table. Example:
 #
 #   When I fill in the following:
